@@ -1,0 +1,70 @@
+*{
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: black;
+    color: white;
+}
+button{
+    padding: 10px;
+    background-color: bisque;
+    color: rgb(241, 3, 3);
+    border: none;
+    margin-top: 2px;
+    font-size: 1rem;
+    border-radius: 10px;
+}
+
+h1{
+    padding: 20px;
+    text-align: center;
+    background-color: black;
+    color: wheat;
+}
+label{
+    padding: 5px;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+input{
+    background-color: rgb(49, 42, 33);
+    border: 1px solid gold;
+}
+
+#books{
+    display: flex;
+    padding:10px;
+    /* grid-template-columns: repeat(1fr,minmax(150px,1fr)); */
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: rgb(168, 145, 145);
+    font-size: 1.5rem;
+}
+form{
+    display: flex;
+    justify-content: center;
+}
+#add{
+    width: 100px; 
+}
+.card{
+    padding:20px;
+    border: 2px solid rgb(207, 204, 38);
+    background-color: rgb(49, 42, 33);
+}
+.card>div{
+    color:gold;
+    background-color: rgb(49, 42, 33);
+}
+#books>div>button{
+    display: flex;
+}
+.btnRemove{
+    color: gold;
+    background-color: #9e4a6a
+}
+.readbtn{
+    color: gold;
+    background-color: rgb(100, 88, 73);
+}
