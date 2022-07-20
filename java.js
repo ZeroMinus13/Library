@@ -1,4 +1,13 @@
 let myLibrary = [];
+class Book{
+    constructor(name, author, pages, read){
+    this.name = name;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+   }
+}
+
 function display(myLibrary){
     let div = document.createElement('div')
     let btnRemove = document.createElement('button')
@@ -31,12 +40,7 @@ function display(myLibrary){
         }
     }
 }
-function Book(name, author, pages, read){
-    this.name = name;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-}
+
 
 function addBookToLibrary() {
     // let form = document.getElementById('form').style.display = "none"

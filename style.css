@@ -42,8 +42,8 @@ input{
     font-size: 1.5rem;
 }
 form{
-    display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 #add{
     width: 100px; 
