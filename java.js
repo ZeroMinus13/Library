@@ -52,9 +52,13 @@ function addBookToLibrary() {
   if (name == '' || author == '' || pages == '') return;
   myLibrary.push(mybook);
   display(myLibrary);
-  let form = document.getElementById('form').reset();
+  let form = document.getElementsByClassName('form')[0].reset();
 }
 
+function toggle() {
+  let form = document.getElementsByClassName('form');
+  form[0].classList.toggle('display');
+}
 function removeBook() {
   this.remove();
   console.log(this);
@@ -63,6 +67,34 @@ let btnAddform = document.getElementById('addBook');
 let btnAddtoBook = document.getElementById('add');
 
 btnAddtoBook.addEventListener('click', addBookToLibrary);
-btnAddform.addEventListener('click', () => {
-  let form = (document.getElementById('form').style.display = 'flex');
-});
+btnAddform.addEventListener('click', toggle);
+
+(function validation() {
+  let author = document.getElementById('author');
+  let name = document.getElementById('name');
+  let form = document.getElementById('form');
+
+  name.addEventListener('input', () => {
+    name.setCustomValidity('');
+    name.checkValidity();
+  });
+  name.addEventListener('invalid', () => {
+    if (author.value === '');
+    name.setCustomValidity('Title required!');
+  });
+  author.addEventListener('input', () => {
+    author.setCustomValidity('');
+    author.checkValidity();
+  });
+  author.addEventListener('invalid', () => {
+    if (author.value === '');
+    author.setCustomValidity('Author required!');
+  });
+
+  document.querySelectorAll('input').forEach(function (element) {
+    element.addEventListener('blur', function () {
+      if (this.checkValidity()) this.classList.remove('error');
+      else this.classList.add('error');
+    });
+  });
+})();

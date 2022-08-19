@@ -1,70 +1,95 @@
-*{
-    box-sizing: border-box;
-    font-family:Arial, Helvetica, sans-serif;
-    margin: 0;
-    background-color: black;
-    color: white;
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: black;
+  color: white;
 }
-button{
-    padding: 10px;
-    background-color: bisque;
-    color: rgb(241, 3, 3);
-    border: none;
-    margin-top: 2px;
-    font-size: 1rem;
-    border-radius: 10px;
-}
-
-h1{
-    padding: 20px;
-    text-align: center;
-    background-color: black;
-    color: wheat;
-}
-label{
-    padding: 5px;
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-input{
-    background-color: rgb(49, 42, 33);
-    border: 1px solid gold;
+button {
+  padding: 10px;
+  background-color: bisque;
+  color: rgb(241, 3, 3);
+  border: none;
+  margin-top: 2px;
+  font-size: 1rem;
+  border-radius: 10px;
 }
 
-#books{
-    display: flex;
-    padding:10px;
-    /* grid-template-columns: repeat(1fr,minmax(150px,1fr)); */
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-    color: rgb(168, 145, 145);
-    font-size: 1.5rem;
+h1 {
+  padding: 20px;
+  text-align: center;
+  background-color: black;
+  color: wheat;
 }
-form{
-    justify-content: center;
-    flex-wrap: wrap;
+label {
+  padding: 5px;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
-#add{
-    width: 100px; 
+
+#books {
+  display: flex;
+  padding: 10px;
+  /* grid-template-columns: repeat(1fr,minmax(150px,1fr)); */
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: rgb(168, 145, 145);
+  font-size: 1.5rem;
 }
-.card{
-    padding:20px;
-    border: 2px solid rgb(207, 204, 38);
-    background-color: rgb(49, 42, 33);
+.form {
+  display: none;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1px;
 }
-.card>div{
-    color:gold;
-    background-color: rgb(49, 42, 33);
+#add {
+  width: 100px;
 }
-#books>div>button{
-    display: flex;
+.card {
+  padding: 20px;
+  border: 2px solid rgb(207, 204, 38);
+  background-color: rgb(49, 42, 33);
 }
-.btnRemove{
-    color: gold;
-    background-color: #9e4a6a
+.card > div {
+  color: gold;
+  background-color: rgb(49, 42, 33);
 }
-.readbtn{
-    color: gold;
-    background-color: rgb(100, 88, 73);
+#books > div > button {
+  display: flex;
+}
+.btnRemove {
+  color: gold;
+  background-color: #9e4a6a;
+}
+.readbtn {
+  color: gold;
+  background-color: rgb(100, 88, 73);
+}
+
+.addbook {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.display {
+  display: flex;
+}
+
+input {
+  background-color: rgb(49, 42, 33);
+  border: 1px solid gold;
+  text-align: center;
+}
+input:valid {
+  border: 2px solid green;
+}
+input:focus:invalid {
+  border: 2px solid red;
+}
+input:focus {
+  outline: none;
+}
+.error:invalid {
+  border: 2px solid red;
 }
